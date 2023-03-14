@@ -114,7 +114,7 @@ export class RestApiConnectorService extends ApiConnector {
         } else if (object.type == "note") {
             return object["title"];
         } else if ("name" in object) {
-            return object["name"];
+            return object["name"] as string;
         } else if (object["attackID"]) {
             return object["attackID"];
         } else {
